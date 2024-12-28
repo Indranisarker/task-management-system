@@ -1,6 +1,8 @@
 @extends('navber')
 
 @section('main')
+<x-messageBanner message="User Login Successfully!" class="alert alert-success"/>
+<x-messageBanner message="User id or password incorrect. Please try again!" class="alert alert-danger"/>
 <div class="login-container">
     <div class="image-section">
         <img src="{{ asset('assets/images/blog-3.jpg') }}" class="loginLogo">

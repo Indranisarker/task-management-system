@@ -4,26 +4,35 @@
 <div class="login-container">
     <div class="form-section">
         <h1>Sign Up</h1>
-        <form action="" id="signupform" name="signupform">
+        <form action="/add-user" id="signupform" name="signupform" method="post">
+            @csrf
             <div class="form-group">
                 <label for="name">Name<span class="req" style="color: red">*</span></label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                <div id="nameError" class="invalid-feedback"></div>
+                <input type="text" id="name" name="name" placeholder="Enter your name" value="{{ old('name') }}">
+                <div style="color: red">@error('name') {{ $message }} @enderror </div>
             </div>
             <div class="form-group">
                 <label for="email">Email<span class="req" style="color: red">*</span></label>
-                <input type="email" id="email" name="email" placeholder="admin@gmail.com" required>
-                <div id="emailError" class="invalid-feedback"></div>
+                <input type="text" id="email" name="email" placeholder="admin@gmail.com" value="{{ old('email') }}">
+                <div style="color: red">@error('email') {{ $message }} @enderror </div>
             </div>
             <div class="form-group">
                 <label for="employee-id">Employee Id<span class="req" style="color: red">*</span></label>
-                <input type="text" id="employee-id" name="employee-id" placeholder="Enter employee id" required>
-                <div id="employee-idError" class="invalid-feedback"></div>
+                <input type="text" id="employee-id" name="employee-id" placeholder="Enter employee id" value="{{ old('employee-id') }}">
+                <div style="color: red">@error('employee-id') {{ $message }} @enderror </div>
             </div>
             <div class="form-group">
                 <label for="password">Password<span class="req" style="color: red">*</span></label>
-                <input type="password" id="password" name="password" placeholder="********" required>
-                <div id="passwordError" class="invalid-feedback"></div>
+                <input type="password" id="password" name="password" placeholder="********">
+                <div style="color: red">@error('password') {{ $message }} @enderror </div>
+            </div>
+            <div class="form-group">
+                <label for="role">Select a Role</label>
+                <select name="role" id="role">
+                    <option value="manager">Manager </option>
+                    <option value="teammate">Teammate </option>
+                </select>
+                <div style="color: red">@error('role') {{ $message }} @enderror </div>
             </div>
             <button type="submit" class="login-btn">Sign Up </button>
         </form>

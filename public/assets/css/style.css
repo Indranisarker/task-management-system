@@ -199,7 +199,13 @@ footer {
     border-radius: 5px;
     font-size: 1rem;
 }
-
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
 .login-btn {
     width: 50%;
     padding: 10px;

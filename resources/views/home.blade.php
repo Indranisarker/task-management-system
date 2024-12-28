@@ -1,6 +1,7 @@
 @extends('navber')
 
 @section('main')
+<x-messageBanner message="Home Page Landing Successfully!" class="alert alert-success"/>
 <img src="{{ asset('assets/images/bg 2.jpg') }}" style="margin-left: 70px;" alt="home image" class="homeLogo">
 <section class="about-us">
     <div class="container">
