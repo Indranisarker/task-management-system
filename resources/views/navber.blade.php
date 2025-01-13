@@ -15,7 +15,7 @@
         </div>
         <div class="navbar-center">
             <a href="/">Home</a>
-            <a href="#">About Us</a>
+            <a href="{{ route('/') }}">About Us</a>
             <a href="#">Contact</a>
         </div>
         <div class="navbar-right">

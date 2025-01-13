@@ -20,4 +20,9 @@ class HomeController extends Controller
       function showSignUpPage(){
         return view('sign-up');
     }
+
+    //redirect to home page when click to about us button
+    function about(){
+        return to_route('/');
+    }
 }
